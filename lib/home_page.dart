@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
+            leading: Icon(Icons.home),
             expandedHeight: 180.0,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
@@ -80,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                   tag: item.id,
                   child: InkWell(
                     child: Image(image: AssetImage(item.icon)),
-                    onTap: ()=>Navigator.pop(context),
+                    onTap: () => Navigator.pop(context),
                   ),
                 ),
               );
@@ -181,27 +182,13 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.only(bottom: 10.0, right: 10.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          Flexible(
-            flex: 1,
-            child: Text('Precio', style: _greyStyle),
-          ),
+          Flexible(flex: 1, child: Text('Precio', style: _greyStyle)),
           SizedBox(width: 5.0),
-          Flexible(
-            flex: 1,
-            child: Text(price.toStringAsPrecision(2), style: _boldStyle),
-          ),
-          Flexible(
-            flex: 1,
-            child: Text('Total', style: _greyStyle),
-          ),
+          Flexible(flex: 1, child: Text(price.toStringAsPrecision(2), style: _boldStyle)),
+          Flexible(flex: 1, child: Text('Total', style: _greyStyle)),
           SizedBox(width: 5.0),
-          Flexible(
-            flex: 1,
-            child: Text((qty * price).toString(), style: _boldStyle),
-          ),
+          Flexible(flex: 1, child: Text((qty * price).toString(), style: _boldStyle)),
         ],
       ),
     );
