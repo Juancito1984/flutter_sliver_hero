@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
 //          Flexible(child: _imagesItem(item), flex: 1),
-          Flexible(child: _buildColumn1(item), flex: 1),
+          Flexible(child: _buildImage(item), flex: 1),
           Flexible(child: _buildColumn2(item), flex: 3),
         ],
       ),
@@ -91,8 +91,9 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildColumn1(OrderItem item) {
-    return Padding(
+  Widget _buildImage(OrderItem item) {
+    return Container(
+      alignment: Alignment.center,
       padding: EdgeInsets.only(left: 5.0, right: 15.0, top: 5.0),
       child: InkWell(
         child: Hero(
