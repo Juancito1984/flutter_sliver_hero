@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
             expandedHeight: 180.0,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text('Order Sumary'),
+              title: Text('Resumen de ordenes'),
               background: Image.asset('images/restaurant.jpg'),
             ),
           ),
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Text('Quantity', style: _greyStyle),
+              Text('Cantidad', style: _greyStyle),
               SizedBox(width: 20.0),
               DropdownButton(
                 items: _ddValues
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Flexible(
             flex: 1,
-            child: Text('Item Price', style: _greyStyle),
+            child: Text('Precio', style: _greyStyle),
           ),
           SizedBox(width: 5.0),
           Flexible(
